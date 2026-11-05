@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UH Student Center Room Booking</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <span class="brand">UH Student Center Rooms</span>
+    <a href="index.html" class="active">Home</a>
+    <a href="booking.html">Book a Room</a>
+    <a href="my-bookings.html">My Bookings</a>
+  </nav>
+
+  <main>
+    <h1>Welcome!</h1>
+    <p>
+      Browse the meeting rooms available at the University of Houston
+      Student Center. Check each room's capacity, equipment, and food
+      policy before you book.
+    </p>
+
+    <h2>Available Rooms</h2>
+    <div id="room-list" class="room-list">
+      <!-- Room cards are inserted here by js/rooms.js -->
+      <p>Loading rooms...</p>
+    </div>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/rooms.js"></script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+/* ---------- Basic reset & page setup ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5f5f5;
+  color: #222;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+h1, h2 {
+  color: #c8102e; /* UH red */
+}
+
+/* ---------- Navigation bar ---------- */
+nav.navbar {
+  background-color: #c8102e; /* UH red */
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+nav.navbar .brand {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-right: auto;
+}
+
+nav.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav.navbar a:hover,
+nav.navbar a.active {
+  text-decoration: underline;
+}
+
+/* ---------- Room cards (index.html) ---------- */
+.room-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.room-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.room-card h3 {
+  margin-top: 0;
+  color: #c8102e;
+}
+
+.room-card ul {
+  padding-left: 18px;
+  margin: 8px 0;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.badge.food-yes {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.badge.food-no {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* ---------- Forms (booking.html) ---------- */
+form {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 480px;
+  margin-top: 16px;
+}
+
+form label {
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+form button {
+  margin-top: 16px;
+  background-color: #c8102e;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #a10d24;
+}
+
+/* ---------- Bookings list (my-bookings.html) ---------- */
+.booking-item {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.booking-item button {
+  background-color: #721c24;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.booking-item button:hover {
+  background-color: #4f151a;
+}
+
+/* ---------- Status / helper messages ---------- */
+.status-message {
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+.status-message.error {
+  color: #a10d24;
+}
+
+.status-message.success {
+  color: #1a7a31;
+}
+
+/* ---------- Bookings list extras ---------- */
+.booking-details h3 {
+  margin: 0 0 6px;
+  color: #c8102e;
+}
+
+.booking-details p {
+  margin: 2px 0;
+}
+
+.booking-item {
+  gap: 16px;
+}
+
+.empty-message {
+  background: #fff;
+  border: 1px dashed #ccc;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+@media (max-width: 600px) {
+  nav.navbar {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  nav.navbar .brand {
+    flex-basis: 100%;
+  }
+
+  .booking-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
